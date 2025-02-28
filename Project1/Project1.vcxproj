@@ -130,9 +130,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="message.cpp" />
+    <ClCompile Include="in_and_out_file.cpp" />
     <ClCompile Include="user.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="in_and_out_file.h" />
     <ClInclude Include="message.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>
