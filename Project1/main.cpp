@@ -2,6 +2,7 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
+#include <conio.h>
 #include "message.h"
 #include "user.h"
 #include "in_and_out_file.h"
@@ -29,16 +30,18 @@ int main() {
 	if (fs::file_size(filePathMessage) > 0) {
 		in_vector_message(messagefile, vectorMessage);
 	}
+
 	
 
 
-	
+
 
 
 
 
 	in_file_message(messagefile, vectorMessage);
 	in_file_user(userfile, vectorUser);
+
 	userfile.close();
 	messagefile.close();
 
