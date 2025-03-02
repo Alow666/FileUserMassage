@@ -26,10 +26,12 @@ int main() {
 	std::vector <User> vectorUser;
 	
 	if (fs::file_size(fs::path("all_user.txt")) > 0) {
+		userfile.seekg(0,std::ios_base::beg);
 		in_vector_user(userfile, vectorUser);
 	}
 	
 	if (fs::file_size(fs::path("all_message.txt")) > 0) {
+		messagefile.seekg(0, std::ios_base::beg);
 		in_vector_message(messagefile, vectorMessage);
 	}
 
@@ -90,7 +92,10 @@ int main() {
 		}
 		break;
 	}
-
+	
+	userfile.seekg(0, std::ios_base::beg);
+	messagefile.seekg(0, std::ios_base::beg);
+	
 	in_file_message(messagefile, vectorMessage);
 	in_file_user(userfile, vectorUser);
 
