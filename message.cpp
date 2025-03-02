@@ -28,3 +28,12 @@ std::ostream& operator <<(std::ostream& os, const Message& obj)
 	os << obj._receiver;
 	return os;
 }
+
+std::iostream& operator <<(std::iostream& out, const Message& obj) {
+	out << obj._text;
+	out << ' ';
+	out << obj._sender;
+	out << ' ';
+	out << obj._receiver;
+	return out;
+}

@@ -28,3 +28,12 @@ std::ostream& operator <<(std::ostream& os, const User& obj)
 	os << obj._pass;
 	return os;
 }
+
+std::iostream& operator <<(std::iostream& out, const User& obj) {
+	out << obj._name;
+	out << ' ';
+	out << obj._login;
+	out << ' ';
+	out << obj._pass;
+	return out;
+}
